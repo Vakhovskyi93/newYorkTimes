@@ -1,63 +1,4 @@
-// название статьи
-// фото
-// автор
-// дата
 
- 
-
-// let title;
-// let subtitle;
-// let section;
-// let subsection;
-// let published_date;
-// let articleLink;
-// let ingSrc;
-// let newsWrap = document.querySelector('.news__wrap');
-
-
-// function getRes(data) {
-//     let title = data.results[2].title;
-//     let subtitle = data.results[2].abstract;
-//     let section = data.results[2].section;
-//     let subsection = data.results[2].subsection;
-//     let published_date = data.results[2].published_date;
-//     let articleLink = data.results[2].url;
-//     let ingSrc = data.results[2].media[0]['media-metadata'][2].url;
-//     let autor = 'ggg'
-
-//     console.log(title,section)
-
-//     newsWrap.innerHTML += `
-    
-
-    
-//                 <div class="col-sm-6 col-md-4">
-//                   <div class="thumbnail">
-//                          <div class="row  ">
-                             
-//                             <p class="col-12 text-right">${published_date}</p>
-//                         </div>
-//                     <p>${subsection}</p>
-//                     <img src="${ingSrc}" alt="...">
-//                     <div class="caption">
-//                         <h3> <strong>${title}</strong></h3>
-//                         <p class='text-center'>${subtitle}</p>
-//                         <p class='text-center'>${subtitle}</p>
-//                         <div class="row">
-//                             <p class="pl-3 col-6"><a href="${articleLink}" class="btn btn-primary" role="button">READ MORE</a> 
-//                             <p class="pl-3 mt-2 col-6 text-right">${autor}</p>
-//                         </div>
-                         
-//                       </div>
-//                   </div>
-//                 </div>
-              
-// `;
-
-
-
-   
-// }
 
 class addToHtml{
 
@@ -132,14 +73,7 @@ class addToHtml{
 
 
     pullData() {
-        //let appKey = 'qs6THAQQGG1my522N1G4kwfxY95VJeqA';
-        // this.title = data.results[2].title
-        // this.subtitle = data.results[2].abstract;
-        // this.section = data.results[2].section;
-        // this.subsection = data.results[2].subsection;
-        // this.published_date = data.results[2].published_date;
-        // this.articleLink = data.results[2].url;
-        // this.ingSrc = data.results[2].media[0]['media-metadata'][2].url;
+        
         fetch(`https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=${appKey}`,{
                 method: 'GET',
 
@@ -314,17 +248,7 @@ class addToHtml{
         this.articlesGroup.innerHTML +=  `
             <option data-group="${name}">${name}</option>
         
-        `
-
-
-
-
-
-    }
-    
- 
-
-
+        ` }
 }
 const start = new addToHtml();
 start.init()
@@ -332,27 +256,4 @@ start.init()
 let articlesType =  document.querySelector('.articlesType');
 let articlesGroup = document.querySelector('.articlesGroup');
 let type ;
-// let ty = articlesType.addEventListener('click', function(e) {
-//     let type = e.target.options[event.target.selectedIndex].dataset.set;
-//     console.log(type)
-//     f(e)
-    
-// })
-
-// let cat = articlesGroup.addEventListener('change', function(e) {
-//     let group = e.target.options[event.target.selectedIndex].dataset.group;
-//     console.log(group)
-//     f( group)
-    
-// })
-// console.log(type)
-
-// function f() {
-
-   
-//     console.log(ty)
-
-
-    
-// }
 
